@@ -182,3 +182,17 @@ button:disabled {
   font-weight: 300;
   padding: 12px 24px 0 24px;
 }
+@media only screen and (max-width: 500px) {
+  .chat__sidebar {
+    /* height: 20vh; */
+    display: none;
+  }
+  .chat__main {
+    display: flex;
+    justify-content: space-between;
+    height: 95vh;
+  }
+  button {
+    padding: 5px 10px;
+  }
+}
