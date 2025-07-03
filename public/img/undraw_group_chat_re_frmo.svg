@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="220" rx="32" fill="#7b5cbf"/>
+  <ellipse cx="160" cy="110" rx="120" ry="70" fill="#fff" fill-opacity="0.9"/>
+  <ellipse cx="110" cy="110" rx="18" ry="18" fill="#7b5cbf"/>
+  <ellipse cx="210" cy="110" rx="18" ry="18" fill="#7b5cbf"/>
+  <rect x="120" y="150" width="80" height="12" rx="6" fill="#7b5cbf" fill-opacity="0.7"/>
+  <text x="160" y="60" text-anchor="middle" font-size="32" fill="#7b5cbf" font-family="Inter, Arial, sans-serif">Chat</text>
+</svg>
