@@ -2,14 +2,12 @@ const validator = require('validator');
 const users = [];
 
 const addUser = ({ id, username, room }) => {
-  // clean the data
   if (typeof username !== 'string' || typeof room !== 'string') {
     return { error: 'Username and room must be strings!' };
   }
   username = validator.escape(username.trim().toLowerCase());
   room = validator.escape(room.trim().toLowerCase());
 
-  // Validate the data
   if (!username || !room) {
     return {
       error: "Username and room are required!",
@@ -28,7 +26,6 @@ const addUser = ({ id, username, room }) => {
     return { error: 'Room name contains invalid characters.' };
   }
 
-  // Check for existing user
   const existingUser = users.find((user) => {
     return user.room === room && user.username === username;
   });
@@ -38,7 +35,6 @@ const addUser = ({ id, username, room }) => {
       error: "Username already exists!",
     };
   }
-  // Store user
 
   const user = { id, username, room };
   users.push(user);
@@ -51,7 +47,6 @@ const removeUser = (id) => {
     return users.splice(index, 1)[0];
   }
 };
-// Get User
 const getUser = (id) => {
   return users.find((user) => user.id === id);
 };

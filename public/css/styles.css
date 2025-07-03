@@ -14,12 +14,15 @@ input {
   font-size: 14px;
 }
 
-body {
+body, html {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   line-height: 1.4;
   color: #222;
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
   transition: background 0.4s, color 0.4s, box-shadow 0.4s;
 }
 
@@ -636,14 +639,24 @@ body.dark-mode .msg-edit-btn:hover, body.dark-mode .msg-del-btn:hover {
 body.dark-mode .join-right-panel {
   background: #23243a;
 }
+.join-form-cta {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: 5vw;
+}
 .join-form-box {
-  margin: 0 auto;
-  min-width: 320px;
-  max-width: 400px;
+  margin: 0 0 0 auto;
+  min-width: 380px;
+  max-width: 440px;
+  min-height: 440px;
   background: #fff;
   border-radius: 1.2rem;
   box-shadow: 0px 8px 32px 0px #1d1f2633;
-  padding: 36px 32px 28px 32px;
+  padding: 56px 40px 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -654,11 +667,22 @@ body.dark-mode .join-form-box {
   color: #e0e0e0;
   box-shadow: 0px 8px 32px 0px #0008;
 }
-.join-form-box h1 {
-  color: #6b47b8;
+.join-form-box h2 {
+  margin-bottom: 28px;
+}
+.join-form-box label {
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+.join-form-box input {
   margin-bottom: 18px;
-  font-size: 2rem;
-  font-weight: 700;
+}
+.join-form-box button[type="submit"] {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+#active-rooms-section {
+  margin-top: 24px !important;
 }
 .join-footer {
   text-align: center;
@@ -685,6 +709,10 @@ body.dark-mode .join-form-box {
     flex: none;
     padding: 0;
   }
+  .join-form-cta {
+    justify-content: center;
+    margin-right: 0;
+  }
   .join-form-box {
     min-width: 90vw;
     max-width: 98vw;
@@ -693,6 +721,7 @@ body.dark-mode .join-form-box {
 }
 
 .landing-hero {
+  flex: 1 0 auto;
   width: 100vw;
   min-height: 70vh;
   background: linear-gradient(270deg, #f5f7fa, #c3cfe2, #7b5cbf, #5e72eb, #f5f7fa);
@@ -767,12 +796,6 @@ body.dark-mode .hero-subtitle {
   justify-content: center;
   min-width: 220px;
 }
-.join-form-cta {
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
 .testimonials-section {
   background: #fff;
   padding: 36px 0 24px 0;
@@ -819,11 +842,16 @@ body.dark-mode .testimonial {
   font-weight: 600;
 }
 .landing-footer {
+  flex-shrink: 0;
+  width: 100%;
   background: #f7f7fa;
   padding: 18px 0 10px 0;
   text-align: center;
   border-top: 1px solid #e0e0e0;
   margin-top: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 body.dark-mode .landing-footer {
   background: #23243a;
